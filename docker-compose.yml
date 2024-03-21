@@ -1,0 +1,11 @@
+version: '2.4'
+services:
+  wechat-forward-bot:
+    container_name: wechat-forward-bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      forward_target_username: "轼远"
+    command: ./server
+    restart: always
